@@ -1,0 +1,46 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  padding: 20px;
+  margin: 15px;
+}
+.mainContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+  margin-top: 16px;
+  margin-left: 5rem;
+}
+.scoreboard {
+  display: flex;
+  padding: 19px;
+}
+
+.left-h2 {
+  margin-right: 10px;
+}
+
+.refreshBtn {
+  padding: 6px;
+  border-radius: 12px;
+}
+
+.submitBtn {
+  padding: 6px;
+  border-radius: 12px; 
+}
+
+.add-score {
+  display: flex;
+  flex-direction: column;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
