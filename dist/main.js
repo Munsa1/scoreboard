@@ -106,7 +106,7 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, style) {\
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n\r\n\n\n//# sourceURL=webpack://scoreboard/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n\r\nconst list = document.getElementById('scorelist');\r\n\r\nconst myList = [\r\n  {\r\n    name: 'Munsa Mibenge',\r\n    score: 150,\r\n  },\r\n  {\r\n    name: 'Howard Huges',\r\n    score: 140,\r\n  },\r\n  {\r\n    name: 'Napolean Hill',\r\n    score: 130,\r\n  },\r\n  {\r\n    name: 'Shannon Biggs',\r\n    score: 129,\r\n  },\r\n  {\r\n    name: 'Crystal Summer',\r\n    score: 125,\r\n  },\r\n  {\r\n    name: 'John Lenon',\r\n    score: 115,\r\n  },\r\n  {\r\n    name: 'Chris Pratt',\r\n    score: 110,\r\n  },\r\n  {\r\n    name: 'The Rock',\r\n    score: 108,\r\n  },\r\n  {\r\n    name: 'Mike Myers',\r\n    score: 103,\r\n  },\r\n  {\r\n    name: 'Eddie Murphy',\r\n    score: 120,\r\n  }\r\n];\r\n\r\nmyList.forEach(()=>{\r\n const li = document.createElement('li');\r\n li.innerHTML = `${myList.name}   ${myList.score}`;\r\n list.appendChild(li);\r\n})\n\n//# sourceURL=webpack://scoreboard/./src/index.js?");
 
 /***/ })
 

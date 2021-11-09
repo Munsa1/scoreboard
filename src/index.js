@@ -44,6 +44,9 @@ const myList = [
   }
 ];
 
-myList.forEach((populate)=>{
- list.innerHTML(populate);
+myList.forEach((item)=>{
+ const li = document.createElement('li');
+
+ li.innerHTML = `${item.name}: ${item.score}`;
+ list.appendChild(li);
 })
