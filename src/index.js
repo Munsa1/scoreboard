@@ -49,4 +49,4 @@ myList.forEach((item)=>{
 
  li.innerHTML = `${item.name}: ${item.score}`;
  list.appendChild(li);
-})
+});

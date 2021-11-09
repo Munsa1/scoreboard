@@ -1,19 +1,37 @@
-* {
+/* * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-}
+} */
 
 header {
-  padding: 10% 5%;
+  padding: 5%;
 }
 
 .mainContainer{
   display: flex;
+  justify-content: space-between;
+}
+
+.container-1 {
+  width: 35%;
+  margin-left: 50px;
+}
+
+.refreshBtn {
+
+}
+
+.container-2 {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  width: 35%;
 }
 
 .scoreboard {
   display: flex;
+  justify-content: space-between;
 
 }
 /* .add-score {
