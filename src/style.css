@@ -4,7 +4,29 @@
   box-sizing: border-box;
 }
 
-h1 {
+header {
+  padding: 10% 5%;
+}
+
+.mainContainer{
+  display: flex;
+}
+
+.scoreboard {
+  display: flex;
+
+}
+/* .add-score {
+  display: flex;
+  flex-direction: column;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+} */
+
+/* h1 {
   padding: 20px;
   margin: 15px;
 }
@@ -15,8 +37,8 @@ h1 {
   width: 70%;
   margin-top: 16px;
   margin-left: 5rem;
-}
-.scoreboard {
+} */
+/* .scoreboard {
   display: flex;
   padding: 19px;
 }
@@ -40,13 +62,4 @@ h1 {
   padding: 0;
   margin: 0;
   list-style: none;
-}
-/* .add-score {
-  display: flex;
-  flex-direction: column;
-}
-
-.form {
-  display: flex;
-  flex-direction: column;
 } */
