@@ -10,9 +10,31 @@ header {
 
 .mainContainer{
   display: flex;
+  margin: 25px 35px;
+}
+
+.scoreboard {
+  display: flex;
   justify-content: space-between;
 }
 
+.left-h2 {
+  margin: 0 50px 0 0;
+}
+
+.scorelist {
+  border-style: solid;
+  margin-top: 20px;
+}
+
+.scorelist li {
+  padding: 2px 0;
+  margin: 3px 0;
+}
+
+.scorelist :nth-child(even) {
+  background-color: rgb(181, 185, 189);
+}
 .container-1 {
   width: 35%;
   margin-left: 50px;
@@ -23,17 +45,13 @@ header {
 }
 
 .container-2 {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   padding: 0;
-  width: 35%;
+  width: 35%; */
+  margin-left: 5rem;
 }
 
-.scoreboard {
-  display: flex;
-  justify-content: space-between;
-
-}
 /* .add-score {
   display: flex;
   flex-direction: column;
