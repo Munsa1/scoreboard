@@ -1,6 +1,5 @@
 import './style.css';
-
-const list = document.getElementById('scorelist');
+import { scorelog } from './scores';
 
 const myList = [
   {
@@ -45,9 +44,4 @@ const myList = [
   },
 ];
 
-myList.forEach((item) => {
-  const li = document.createElement('li');
-
-  li.innerHTML = `${item.name}: ${item.score}`;
-  list.appendChild(li);
-});
+document.addEventListener('DOMContentLoaded', () => scorelog(myList));
