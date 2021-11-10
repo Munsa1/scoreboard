@@ -115,7 +115,7 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, style) {\
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _scores__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./scores */ \"./src/scores.js\");\n\n\n\nconst list = document.getElementById('scorelist');\n\nconst myList = [\n  {\n    name: 'Munsa Mibenge',\n    score: 150,\n  },\n  {\n    name: 'Howard Huges',\n    score: 140,\n  },\n  {\n    name: 'Napolean Hill',\n    score: 130,\n  },\n  {\n    name: 'Shannon Biggs',\n    score: 129,\n  },\n  {\n    name: 'Crystal Summer',\n    score: 125,\n  },\n  {\n    name: 'John Lenon',\n    score: 115,\n  },\n  {\n    name: 'Chris Pratt',\n    score: 110,\n  },\n  {\n    name: 'The Rock',\n    score: 108,\n  },\n  {\n    name: 'Mike Myers',\n    score: 103,\n  },\n  {\n    name: 'Eddie Murphy',\n    score: 120,\n  },\n];\n\ndocument.addEventListener('DOMContentLoaded', () => (0,_scores__WEBPACK_IMPORTED_MODULE_1__.scorelog)(scores));\n\n//# sourceURL=webpack://scoreboard/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _scores_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./scores.js */ \"./src/scores.js\");\n\n\n\nconst myList = [\n  {\n    name: 'Munsa Mibenge',\n    score: 150,\n  },\n  {\n    name: 'Howard Huges',\n    score: 140,\n  },\n  {\n    name: 'Napolean Hill',\n    score: 130,\n  },\n  {\n    name: 'Shannon Biggs',\n    score: 129,\n  },\n  {\n    name: 'Crystal Summer',\n    score: 125,\n  },\n  {\n    name: 'John Lenon',\n    score: 115,\n  },\n  {\n    name: 'Chris Pratt',\n    score: 110,\n  },\n  {\n    name: 'The Rock',\n    score: 108,\n  },\n  {\n    name: 'Mike Myers',\n    score: 103,\n  },\n  {\n    name: 'Eddie Murphy',\n    score: 120,\n  },\n];\n\ndocument.addEventListener('DOMContentLoaded', () => (0,_scores_js__WEBPACK_IMPORTED_MODULE_1__.scorelog)(myList));\n\n//# sourceURL=webpack://scoreboard/./src/index.js?");
 
 /***/ }),
 
@@ -125,7 +125,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
   \***********************/
 /***/ ((__unused_webpack_module, exports) => {
 
-eval("const scorelog = (scores) => {\r\n  const li = document.createElement('li');\r\n   scores.forEach((item) => {\r\n    li.innerHTML = `${item.name}: ${item.score}`;\r\n    list.appendChild(li);\r\n  });\r\n};\r\n\r\nexports.scorelog = scorelog;\n\n//# sourceURL=webpack://scoreboard/./src/scores.js?");
+eval("const scorelog = (scores) => {\n  const list = document.getElementById('scorelist');\n\n  scores.forEach(\n    (entry) => list.insertAdjacentHTML(\n      'beforeend',\n      `\n    <div>${entry.name}: ${entry.score}</div>  \n  `,\n    ),\n  );\n};\n\nexports.scorelog = scorelog;\n\n//# sourceURL=webpack://scoreboard/./src/scores.js?");
 
 /***/ })
 
