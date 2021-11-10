@@ -1,5 +1,5 @@
 import './style.css';
-import { scorelog } from './scores';
+import { scorelog } from './scores.js';
 
 const myList = [
   {
