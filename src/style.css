@@ -9,7 +9,7 @@ header {
   padding: 5%;
 }
 
-.mainContainer{
+.mainContainer {
   display: flex;
   margin: 25px 35px;
 }
@@ -41,6 +41,7 @@ header {
 .scorelist :nth-child(even) {
   background-color: rgb(181, 185, 189);
 }
+
 .container-1 {
   width: 35%;
   margin-left: 50px;
@@ -56,7 +57,7 @@ header {
   margin-bottom: 12%;
 }
 
- input {
+input {
   width: 250px;
   height: 30px;
   font-size: 15px;
@@ -69,8 +70,7 @@ input:nth-of-type(2) {
 
 .submitBtn {
   margin-top: 20px;
-  padding:6px;
+  padding: 6px;
   width: 25%;
   align-self: flex-end;
-  box-shadow: 5px 10x rgb(211, 205, 205);
 }

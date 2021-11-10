@@ -1,4 +1,5 @@
 import './style.css';
+
 const list = document.getElementById('scorelist');
 
 const myList = [
@@ -41,12 +42,12 @@ const myList = [
   {
     name: 'Eddie Murphy',
     score: 120,
-  }
+  },
 ];
 
-myList.forEach((item)=>{
- const li = document.createElement('li');
+myList.forEach((item) => {
+  const li = document.createElement('li');
 
- li.innerHTML = `${item.name}: ${item.score}`;
- list.appendChild(li);
+  li.innerHTML = `${item.name}: ${item.score}`;
+  list.appendChild(li);
 });
