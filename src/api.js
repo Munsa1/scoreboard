@@ -24,3 +24,10 @@ const initUsers = async (data) => {
   const resolve = await getResponse.json();
   return resolve;
 };
+
+const pullData = async () => {
+  const getResponse = await fetch(`${apiLink}${apiEndPoint}/scores/`);
+  const userData = await getResponse.json();
+
+  return userData;
+};
