@@ -33,17 +33,14 @@ header {
 .scorelist {
   border-style: solid;
   margin-top: 20px;
-  margin-right: 10px 0;
+  margin-right: 10px;
   top: 7px;
+  margin-left: 12px;
 }
 
 .scorelist li {
   margin: 5px;
-}
-
-.scorelist li {
   padding: 2px 0;
-  margin: 2px 0;
 }
 
 .scorelist :nth-child(even) {
@@ -89,5 +86,4 @@ body {
   background-image: url(https://www.mastersofgames.com/images/giant/giant-draughts-garden-games-lg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-
 }
