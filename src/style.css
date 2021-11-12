@@ -76,7 +76,6 @@ input:nth-of-type(2) {
 
 .submitBtn {
   margin-top: 20px;
-  padding: 6px;
   width: 25%;
   align-self: flex-end;
 }
