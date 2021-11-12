@@ -1,3 +1,4 @@
+import { initUsers, pullData, newGame } from './api';
 import './style.css';
 import { scorelog } from './scores.js';
 
