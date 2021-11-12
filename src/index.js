@@ -38,6 +38,11 @@ dataSubmit.addEventListener('click', async () => {
   }
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+  newGame(`Game created at: ${new Date()}`);
+  loadScores();
+});
+
 
 
 const myList = [
