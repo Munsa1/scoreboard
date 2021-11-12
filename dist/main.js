@@ -108,6 +108,16 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, style) {\
 
 /***/ }),
 
+/***/ "./src/api.js":
+/*!********************!*\
+  !*** ./src/api.js ***!
+  \********************/
+/***/ ((__unused_webpack_module, exports) => {
+
+eval("const apiLink = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/';\nconst apiEndPoint = 'MO2rau7NgxFRdE5bdLWX';\n\nconst newGame = async (name) => {\n  const getResponse = await fetch(apiLink, {\n    method: 'POST',\n    headers: {\n      'Content-Type': 'application/json',\n    },\n    body: JSON.stringify(`{name: ${name}`),\n  });\n  const resolve = await getResponse.json();\n  return resolve;\n};\n\nconst initUsers = async (data) => {\n  const getResponse = await fetch(`${apiLink}${apiEndPoint}/scores/`, {\n    method: 'POST',\n    headers: {\n      'Content-Type': 'application/json',\n    },\n    body: JSON.stringify(data),\n  });\n  const resolve = await getResponse.json();\n  return resolve;\n};\n\nconst pullData = async () => {\n  const getResponse = await fetch(`${apiLink}${apiEndPoint}/scores/`);\n  const userData = await getResponse.json();\n\n  return userData;\n};\n\nexports.pullData = pullData;\nexports.newGame = newGame;\nexports.initUsers = initUsers;\n\n//# sourceURL=webpack://scoreboard/./src/api.js?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
@@ -115,17 +125,7 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, style) {\
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _scores_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./scores.js */ \"./src/scores.js\");\n\n\n\nconst myList = [\n  {\n    name: 'Munsa Mibenge',\n    score: 150,\n  },\n  {\n    name: 'Howard Huges',\n    score: 140,\n  },\n  {\n    name: 'Napolean Hill',\n    score: 130,\n  },\n  {\n    name: 'Shannon Biggs',\n    score: 129,\n  },\n  {\n    name: 'Crystal Summer',\n    score: 125,\n  },\n  {\n    name: 'John Lenon',\n    score: 115,\n  },\n  {\n    name: 'Chris Pratt',\n    score: 110,\n  },\n  {\n    name: 'The Rock',\n    score: 108,\n  },\n  {\n    name: 'Mike Myers',\n    score: 103,\n  },\n  {\n    name: 'Eddie Murphy',\n    score: 120,\n  },\n];\n\ndocument.addEventListener('DOMContentLoaded', () => (0,_scores_js__WEBPACK_IMPORTED_MODULE_1__.scorelog)(myList));\n\n//# sourceURL=webpack://scoreboard/./src/index.js?");
-
-/***/ }),
-
-/***/ "./src/scores.js":
-/*!***********************!*\
-  !*** ./src/scores.js ***!
-  \***********************/
-/***/ ((__unused_webpack_module, exports) => {
-
-eval("const scorelog = (scores) => {\n  const list = document.getElementById('scorelist');\n\n  scores.forEach(\n    (entry) => list.insertAdjacentHTML(\n      'beforeend',\n      `\n    <div>${entry.name}: ${entry.score}</div>  \n  `,\n    ),\n  );\n};\n\nexports.scorelog = scorelog;\n\n//# sourceURL=webpack://scoreboard/./src/scores.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./api.js */ \"./src/api.js\");\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n\n\n\nconst loadScores = async () => {\n  const displayScores = document.getElementById('scorelist');\n\n  while (displayScores.firstChild) {\n    displayScores.removeChild(displayScores.firstChild);\n  }\n\n  const userData = await (0,_api_js__WEBPACK_IMPORTED_MODULE_0__.pullData)();\n\n  userData.result.forEach((entry) => displayScores.insertAdjacentHTML('beforeend', `\n    <div>${entry.user}: ${entry.score}</div>  \n  `));\n};\n\nconst refreshbtn = document.getElementById('refreshBtn');\nrefreshbtn.addEventListener('click', loadScores);\n\nconst dataSubmit = document.getElementById('submit');\ndataSubmit.addEventListener('click', async () => {\n  let username = document.getElementById('username').value;\n  let userscore = document.getElementById('userscore').value;\n\n  if (username !== '' && userscore !== '') {\n    const data = {\n      user: username,\n      score: userscore,\n    };\n\n    await (0,_api_js__WEBPACK_IMPORTED_MODULE_0__.initUsers)(data);\n\n    username = '';\n    userscore = '';\n  }\n});\n\ndocument.addEventListener('DOMContentLoaded', () => {\n  (0,_api_js__WEBPACK_IMPORTED_MODULE_0__.newGame)(`Game created at: ${new Date()}`);\n  loadScores();\n});\n\n//# sourceURL=webpack://scoreboard/./src/index.js?");
 
 /***/ })
 

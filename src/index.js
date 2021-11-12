@@ -21,7 +21,7 @@ refreshbtn.addEventListener('click', loadScores);
 const dataSubmit = document.getElementById('submit');
 dataSubmit.addEventListener('click', async () => {
   let username = document.getElementById('username').value;
-  let userscore = document.getElementById('user-score').value;
+  let userscore = document.getElementById('userscore').value;
 
   if (username !== '' && userscore !== '') {
     const data = {
