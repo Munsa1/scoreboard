@@ -31,3 +31,7 @@ const pullData = async () => {
 
   return userData;
 };
+
+exports.pullData = pullData;
+exports.newGame = newGame;
+exports.initUsers = initUsers;
