@@ -20,6 +20,25 @@ const refreshbtn = document.getElementById('refreshBtn');
 refreshbtn.addEventListener('click', loadScores);
 
 
+const dataSubmit = document.getElementById('submit');
+dataSubmit.addEventListener('click', async () => {
+  let username = document.getElementById('username').value;
+  let userscore = document.getElementById('user-score').value;
+
+  if (username !== '' && userscore !== '') {
+    const data = {
+      user: username,
+      score: userscore,
+    };
+
+    await initUsers(data);
+
+    username = '';
+    userscore = '';
+  }
+});
+
+
 
 const myList = [
   {
