@@ -33,16 +33,22 @@ header {
 .scorelist {
   border-style: solid;
   margin-top: 20px;
+  margin-right: 10px 0;
+  top: 7px;
+}
+
+.scorelist li {
+  margin: 5px;
 }
 
 .scorelist li {
   padding: 2px 0;
   margin: 2px 0;
-  margin-left: 4px;
 }
 
 .scorelist :nth-child(even) {
   background-color: rgb(181, 185, 189);
+  padding: 3px;
 }
 
 .container-1 {
