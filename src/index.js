@@ -16,6 +16,8 @@ const loadScores = async () => {
   `));
 };
 
+const refreshbtn = document.getElementById('refreshBtn');
+refreshbtn.addEventListener('click', loadScores);
 
 
 
