@@ -77,6 +77,7 @@ input:nth-of-type(2) {
 
 body {
   background-color: aquamarine;
-  background-image: url(background.jpg);
+  background-image: url(https://www.mastersofgames.com/images/giant/giant-draughts-garden-games-lg.jpg);
   background-repeat: no-repeat;
+  background-size: cover;
 }
