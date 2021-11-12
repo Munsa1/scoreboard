@@ -78,4 +78,5 @@ input:nth-of-type(2) {
 body {
   background-color: aquamarine;
   background-image: url(background.jpg);
+  background-repeat: no-repeat;
 }
